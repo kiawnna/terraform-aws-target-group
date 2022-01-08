@@ -2,32 +2,24 @@ variable "protocol" {
   type = string
   default = "HTTP"
 }
-
 variable "port" {
   type = number
 }
-
 variable "vpc_id" {
   type = string
 }
-
 variable "health_check_path" {
   type = string
   default = "/"
 }
-
 variable "load_balancer_arn" {
   type = string
 }
-
 variable "app_name" {
   type = string
-  default = "Aleidy"
 }
-
 variable "environment" {
   type = string
-  default = "dev"
 }
 variable "target_type" {
   type = string
@@ -39,7 +31,7 @@ variable "health_check_enabled" {
 }
 variable"health_check_matcher" {
   type = string
-  default = "instance"
+  default = "200-304"
 }
 variable "health_check_protocol" {
   type = string

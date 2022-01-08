@@ -15,6 +15,12 @@ resource "aws_lb_target_group" "target_group" {
      healthy_threshold = var.healthy_threshold
   }
   depends_on = [var.load_balancer_arn]
+
+  tags = {
+    Name = "${var.app_name}-${var.environment}-tg"
+    Deployment_Method = "terraform"
+    Environment = var.environment
+  }
 }
 
 

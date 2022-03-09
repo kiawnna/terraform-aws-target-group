@@ -43,7 +43,7 @@ variable "health_check_timeout" {
 }
 variable "health_check_interval" {
   type = number
-  default = 31
+  default = 60
 }
 variable "healthy_threshold" {
   type = number
